@@ -1,15 +1,26 @@
 package by.bsuir.main;
 
-import by.bsuir.http.client.HttpClient;
-import by.bsuir.http.client.enums.MethodValues;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class Main {
+public class Main extends Application {
+
+
 
     public static void main(String[] args) throws Exception {
-        HttpClient httpClient = new HttpClient();
-        httpClient.createHttpConnection("https://httpbin.org/put", MethodValues.PUT);
-        httpClient.settingTimeOuts();
-        httpClient.settingRequestHeaders();
-        System.out.println(httpClient.getFullResponse());
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("/sample.fxml"));
+        primaryStage.setTitle("CNAS_IPT2_Kuzora");
+        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setResizable(false);
+        primaryStage.setMaximized(false);
+        primaryStage.show();
     }
 }
