@@ -25,43 +25,43 @@
                             <items>
                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="300.0">
                                     <children>
-                                        <Button fx:id="button2" layoutX="9.0" layoutY="10.0" mnemonicParsing="false" onAction="#setButton2" prefHeight="25.0" prefWidth="101.0" text="Send Request">
+                                        <Button fx:id="button1" disable="true" layoutX="9.0" layoutY="10.0" mnemonicParsing="false" onAction="#setButton1" prefHeight="25.0" prefWidth="101.0" text="Send Request">
                                             <font>
                                                 <Font size="9.0" />
                                             </font>
                                         </Button>
-                                        <Button fx:id="button4" layoutX="9.0" layoutY="85.0" mnemonicParsing="false" onAction="#setButton4" prefHeight="25.0" prefWidth="101.0" text="Add requset par">
+                                        <Button fx:id="button3" disable="true" layoutX="9.0" layoutY="85.0" mnemonicParsing="false" onAction="#setButton3" prefHeight="25.0" prefWidth="101.0" text="Add requset par">
                                             <font>
                                                 <Font size="9.0" />
                                             </font>
                                         </Button>
-                                        <Button fx:id="button3" layoutX="9.0" layoutY="60.0" mnemonicParsing="false" onAction="#setButton3" prefHeight="25.0" prefWidth="101.0" text="Add header par">
+                                        <Button fx:id="button2" disable="true" layoutX="9.0" layoutY="60.0" mnemonicParsing="false" onAction="#setButton2" prefHeight="25.0" prefWidth="101.0" text="Add header par">
                                             <font>
                                                 <Font size="9.0" />
                                             </font>
                                         </Button>
-                                        <ComboBox fx:id="comboBox2" layoutX="109.0" layoutY="35.0" onShowing="#setComboBox2" prefHeight="25.0" prefWidth="156.0" promptText="Method" />
-                                        <TextField fx:id="textField1" layoutX="109.0" layoutY="10.0" prefHeight="25.0" prefWidth="156.0" promptText="URL" text="https://httpbin.org/get">
+                                        <ComboBox fx:id="comboBox1" disable="true" layoutX="109.0" layoutY="35.0" onShowing="#setComboBox2" prefHeight="25.0" prefWidth="156.0" promptText="Method" />
+                                        <TextField fx:id="textField1" layoutX="109.0" layoutY="10.0" onAction="#initMethodValues" prefHeight="25.0" prefWidth="156.0" promptText="URL" text="https://httpbin.org/get">
                                             <font>
                                                 <Font size="9.0" />
                                             </font>
                                         </TextField>
-                                        <TextField fx:id="textField2" editable="false" layoutX="109.0" layoutY="60.0" prefHeight="25.0" prefWidth="74.0" promptText="key">
+                                        <TextField fx:id="textField2" disable="true" layoutX="109.0" layoutY="60.0" prefHeight="25.0" prefWidth="74.0" promptText="key">
                                             <font>
                                                 <Font size="9.0" />
                                             </font>
                                         </TextField>
-                              <TextField fx:id="textField2" editable="false" layoutX="191.0" layoutY="60.0" prefHeight="25.0" prefWidth="74.0" promptText="value">
+                              <TextField fx:id="textField3" disable="true" layoutX="191.0" layoutY="60.0" prefHeight="25.0" prefWidth="74.0" promptText="value">
                                  <font>
                                     <Font size="9.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="textField2" editable="false" layoutX="109.0" layoutY="85.0" prefHeight="25.0" prefWidth="74.0" promptText="key">
+                              <TextField fx:id="textField4" disable="true" layoutX="109.0" layoutY="85.0" prefHeight="25.0" prefWidth="74.0" promptText="key">
                                  <font>
                                     <Font size="9.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="textField2" editable="false" layoutX="191.0" layoutY="85.0" prefHeight="25.0" prefWidth="74.0" promptText="value">
+                              <TextField fx:id="textField5" disable="true" layoutX="191.0" layoutY="85.0" prefHeight="25.0" prefWidth="74.0" promptText="value">
                                  <font>
                                     <Font size="9.0" />
                                  </font>
@@ -70,8 +70,13 @@
                                 </AnchorPane>
                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="300.0">
                                     <children>
-                                        <TextArea fx:id="textArea2" editable="false" layoutX="1.0" layoutY="37.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="243.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="37.0" />
-                                        <Label layoutX="85.0" layoutY="14.0" text="Выполнение процессов" />
+                                        <TextArea fx:id="textArea2" editable="false" layoutX="1.0" layoutY="37.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="214.0" prefWidth="300.0" text="Header parameters:&#10;{}&#10;_____________________&#10;Request parameters:&#10;{}&#10;_____________________" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="37.0" />
+                                        <Label layoutX="117.0" layoutY="14.0" text="Request info" />
+                              <Button fx:id="button4" disable="true" layoutX="200.0" layoutY="251.0" mnemonicParsing="false" onAction="#setButton4" prefHeight="25.0" prefWidth="101.0" text="Clear">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Button>
                                     </children>
                                 </AnchorPane>
                             </items>
