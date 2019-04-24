@@ -17,46 +17,23 @@ import java.util.Map;
 
 public class Controller {
 
-    HttpClient httpClient = new HttpClient();
-    Map<String, String> parRequestHeaders = new HashMap<>();
-    Map<String, String> parRequestParameters = new HashMap<>();
-
-    private String defaultBodyMessage =
-            "Header parameters:\n" +
-                    "%s\n" +
-            "_____________________\n" +
-            "Request parameters:\n" +
-                    "%s\n" +
-            "_____________________";
-
-//    private HttpClient httpClient = new HttpClient();
-
+    private static final String defaultBodyMessage = "Header parameters:\n%s\n_____________________\nRequest parameters:\n%s\n_____________________";
+    private HttpClient httpClient = new HttpClient();
+    private Map<String, String> parRequestHeaders = new HashMap<>();
+    private Map<String, String> parRequestParameters = new HashMap<>();
     private ObservableList<MethodValues> methods = FXCollections.observableArrayList(MethodValues.values());
 
     @FXML
     private ComboBox<MethodValues> comboBox1 = new ComboBox<MethodValues>(methods);
 
     @FXML
-    private Button button1, button2, button3, button4, button5;
+    private Button button1, button2, button3, button4;
 
     @FXML
     private TextField textField1, textField2, textField3, textField4, textField5;
 
     @FXML
     private TextArea textArea1, textArea2;
-
-
-    public void setButton5(ActionEvent event) {
-    }
-
-    public void setComboBox2(Event event) {
-    }
-
-    public void setButton4(ActionEvent event) {
-        parRequestHeaders.clear();
-        parRequestParameters.clear();
-        textArea2.setText(String.format(defaultBodyMessage, parRequestHeaders, parRequestParameters));
-    }
 
     public void initMethodValues(Event event) {
         comboBox1.setItems(methods);
@@ -89,7 +66,7 @@ public class Controller {
             parRequestHeaders.put(key, value);
             textField2.clear();
             textField3.clear();
-            textArea2.setText(String.format(defaultBodyMessage, parRequestHeaders, parRequestParameters));
+            setTextAreaText();
         } else {
         }
     }
@@ -101,8 +78,18 @@ public class Controller {
             parRequestParameters.put(key, value);
             textField4.clear();
             textField5.clear();
-            textArea2.setText(String.format(defaultBodyMessage, parRequestHeaders, parRequestParameters));
+            setTextAreaText();
         } else {
         }
+    }
+
+    public void setButton4(ActionEvent event) {
+        parRequestHeaders.clear();
+        parRequestParameters.clear();
+        setTextAreaText();
+    }
+
+    private void setTextAreaText() {
+        textArea2.setText(String.format(defaultBodyMessage, parRequestHeaders, parRequestParameters));
     }
 }

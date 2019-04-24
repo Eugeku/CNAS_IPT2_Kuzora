@@ -6,8 +6,7 @@ public enum MethodValues {
     HEAD("HEAD"),
     OPTIONS("OPTIONS"),
     PUT("PUT"),
-    DELETE("DELETE")
-    ;
+    DELETE("DELETE");
 
     String value;
 

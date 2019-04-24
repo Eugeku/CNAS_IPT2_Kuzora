@@ -40,7 +40,7 @@
                                                 <Font size="9.0" />
                                             </font>
                                         </Button>
-                                        <ComboBox fx:id="comboBox1" disable="true" layoutX="109.0" layoutY="35.0" onShowing="#setComboBox2" prefHeight="25.0" prefWidth="156.0" promptText="Method" />
+                                        <ComboBox fx:id="comboBox1" disable="true" layoutX="109.0" layoutY="35.0" prefHeight="25.0" prefWidth="156.0" promptText="Method" />
                                         <TextField fx:id="textField1" layoutX="109.0" layoutY="10.0" onAction="#initMethodValues" prefHeight="25.0" prefWidth="156.0" promptText="URL" text="https://httpbin.org/get">
                                             <font>
                                                 <Font size="9.0" />
